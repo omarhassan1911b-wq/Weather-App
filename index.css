@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1e2b32;
+}
+main, .display-temp {
+    flex: 1 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    image-rendering: -webkit-optimize-contrast;
+    transition: background-image 0.5s ease;
+}
+.city-temp {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center; 
+    align-items: stretch; 
+    gap: 15px; 
+    padding: 20px 0;
+    width: 100%;
+}
+
+.display-temp .temp-card {
+    opacity: 0; 
+    transform: translateY(30px);
+
+    transition: opacity 0.6s ease, transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    flex: 1; 
+    max-width: 33.33%;   
+    background-color: rgba(36, 52, 61, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    will-change: transform, opacity;
+    cursor: pointer;
+}
+.temp-card.show-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+.display-temp .temp-card.show-animate:hover {
+
+    transform: translateY(-12px) scale(1.02); 
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+
+    background-color: rgba(45, 65, 77, 0.95) !important;
+
+    z-index: 5;
+}
+.temp-card .day-and-date {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    color: #bfc1c8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.temp-card .temp-datails {
+    padding: 30px 20px !important;
+    color: #fff;
+}
+
+.text-center .temp-datails {
+    text-align: center;
+}
+#today-degree { 
+    font-size: clamp(40px, 5vw, 70px); 
+    font-weight: 700; 
+}
+
+.details {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.display-temp .search { 
+    width: 60%; 
+    max-width: 600px;
+    margin: 0 auto 3rem; 
+}
+#search-bar {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+footer {
+    background-color: #1e2b32;
+    padding: 25px 0;
+    color: #fff;
+    margin-top: auto;
+}
+
+@media (max-width: 991px) {
+    .city-temp {
+        flex-wrap: wrap; 
+    }
+    .display-temp .temp-card {
+        flex: none;
+        width: 100%; 
+        max-width: 450px;
+    }
+ 
+    .display-temp .temp-card.show-animate:hover {
+        transform: translateY(-5px);
+    }
+    .display-temp .search {
+        width: 90%;
+    }
+}

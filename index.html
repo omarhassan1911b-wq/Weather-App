@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Omar Mossad</title>
+    
+    <link rel="icon" href="./images/logoo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+    <main class="display-temp" id="search">
+        <div class="bg-color py-5">
+            <div class="container">
+                <div class="search m-auto">
+                    <input type="text" id="search-bar" class="w-100 mb-5" placeholder="&#xF002; Search City..." style="font-family:Arial, FontAwesome"/>
+                </div>
+                
+                <div class="city-temp d-flex">
+                    <div class="temp-card shadow">
+                        <div class="day-and-date d-flex justify-content-between">
+                            <p id="today">Monday</p>
+                            <p id="today-date">19 March</p>
+                        </div>
+                        <div class="temp-datails">
+                            <p id="location" class="fs-4"></p>
+                            <div class="d-flex justify-content-between my-4 align-items-center">
+                                <div>
+                                    <h2 id="today-degree" class="d-inline-block"></h2><h2 class="d-inline-block"><sup>o</sup>C</h2>
+                                </div>
+                                <img id="today-icon" width="90" src="" alt="weather-icon"/>
+                            </div>
+                            <p id="today-description" class="main-color"></p>
+                            <div class="details">
+                                <span><i class="fas fa-umbrella pr-1"></i> <span id="humidty"></span>%</span>
+                                <span><i class="fas fa-wind px-1"></i> <span id="wind"></span> km/h</span>
+                                <span><i class="far fa-compass px-1"></i> <span id="compass"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="temp-card text-center shadow">
+                        <div class="day-and-date">
+                            <p class="nextDay">Tuesday</p>
+                        </div>
+                        <div class="temp-datails">
+                            <div class="mb-3"><img class="nextDay-icon" width="90" src="" alt="weather-icon"/></div>
+                            <h2 class="max-degree d-inline-block"></h2><h2 class="d-inline-block"><sup>o</sup>C</h2>
+                            <br>
+                            <p class="min-degree d-inline-block"></p><p class="d-inline-block"><sup>o</sup>C</p>
+                            <p class="nextDay-description main-color"></p>
+                        </div>
+                    </div>
+
+                    <div class="temp-card text-center shadow">
+                        <div class="day-and-date">
+                            <p class="nextDay">Wednesday</p>
+                        </div>
+                        <div class="temp-datails">
+                            <div class="mb-3"><img class="nextDay-icon" width="90" src="" alt="weather-icon"/></div>
+                            <h2 class="max-degree d-inline-block"></h2><h2 class="d-inline-block"><sup>o</sup>C</h2>
+                            <br>
+                            <p class="min-degree d-inline-block"></p><p class="d-inline-block"><sup>o</sup>C</p>
+                            <p class="nextDay-description main-color"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="text-white mb-0">Copyright &copy; 2024. All rights reserved</p>
+            <div class="social-media text-white mt-3">
+                <a href="https://github.com/omarhassan1911b-wq" target="_blank" class="text-white text-decoration-none">
+                    <i class="fab fa-github mx-3"></i>
+                </a>
+                <a href="https://wa.me/201156547091" target="_blank" class="text-white text-decoration-none">
+                    <i class="fab fa-whatsapp mx-3"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
